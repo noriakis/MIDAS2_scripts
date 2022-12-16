@@ -55,7 +55,6 @@ class Species:
                 self.files[type] = csv.DictReader(io.StringIO(file), delimiter='\t')
             else:
                 self.files[type] = csv.reader(io.StringIO(file), delimiter='\t')
-        print(self.spid)
         ## All SNV summary is in snps in MIDAS2
         prev_path = os.path.abspath(os.path.join(self.dir, os.pardir))
         file = open(prev_path+'/snps_summary.tsv')
