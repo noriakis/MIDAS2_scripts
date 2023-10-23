@@ -183,6 +183,8 @@ class GenomicSite:
 			return '-'
 		elif sample.depth == 0:
 			return '-'
+		elif sample.freq == -1:
+			return '-'
 		elif sample.freq >= 0.5:
 			return self.minor_allele
 		else:
